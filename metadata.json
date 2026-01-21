@@ -1,0 +1,7 @@
+{
+  "name": "Mido SVGA Ultimate Studio",
+  "description": "A professional tool for converting MP4 to SVGA, editing SVGA layers, and performing advanced binary compression on SVGA files.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

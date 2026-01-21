@@ -1,0 +1,14 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  
+  # استثناء مجلد api وأي ملفات بداخله من إعادة التوجيه
+  RewriteRule ^api($|/) - [L]
+  
+  # إذا كان الملف أو المجلد موجوداً، قم بفتحه مباشرة
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  
+  # توجيه أي مسار آخر لـ index.html لدعم React Router
+  RewriteRule . /index.html [L]
+</IfModule>
